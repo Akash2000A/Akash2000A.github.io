@@ -81,8 +81,25 @@ h2{font-size:clamp(1.9rem,4vw,3rem);line-height:1.12;letter-spacing:-.04em;margi
 .contact p{color:var(--muted);margin-bottom:0}
 footer{padding:28px 0;color:var(--muted);font-size:.85rem}
 .footer-inner{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
-@media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:70px}.hero-card{max-width:480px}.grid{grid-template-columns:1fr}.research{grid-template-columns:1fr}.section-head{display:block}.section-intro{margin-top:15px}.timeline{grid-template-columns:1fr}.contact{align-items:flex-start;flex-direction:column}nav{display:none;position:absolute;top:72px;left:0;right:0;background:#0f172a;padding:20px;width:100%;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}nav.open{display:flex}.menu{display:block}}
+
+.moments-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.moment-card{margin:0;overflow:hidden;background:var(--panel);border:1px solid var(--line);border-radius:20px}
+.moment-card img{display:block;width:100%;height:320px;object-fit:cover}
+.moment-card figcaption{padding:21px 23px 24px}
+.moment-card h3{margin:0 0 9px;font-size:1.08rem}
+.moment-card p{margin:0;color:var(--muted);font-size:.95rem}
+
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:70px}.hero-card{max-width:480px}.grid{grid-template-columns:1fr}.moments-grid{grid-template-columns:1fr}.moment-card img{height:auto;max-height:420px}.research{grid-template-columns:1fr}.section-head{display:block}.section-intro{margin-top:15px}.timeline{grid-template-columns:1fr}.contact{align-items:flex-start;flex-direction:column}nav{display:none;position:absolute;top:72px;left:0;right:0;background:#0f172a;padding:20px;width:100%;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}nav.open{display:flex}.menu{display:block}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+
+/* IISER Tirupati Chemistry Lab hero background */
+.hero {
+  background-image: linear-gradient(90deg, rgba(8, 13, 22, .82) 0%, rgba(8, 13, 22, .58) 52%, rgba(8, 13, 22, .28) 100%), url('images/iiser_chem_lab_under1mb.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 </style>
 </head>
 <body>
@@ -90,7 +107,7 @@ footer{padding:28px 0;color:var(--muted);font-size:.85rem}
   <div class="wrap nav">
     <a class="brand" href="#home">AKASH <span>S. S.</span></a>
     <nav id="navlinks" aria-label="Main navigation">
-      <a href="#about">About</a><a href="#research">Research</a><a href="#skills">Methods</a><a href="#journey">Journey</a><a href="#contact">Contact</a>
+      <a href="#about">About</a><a href="#research">Research</a><a href="#skills">Methods</a><a href="#journey">Journey</a><a href="#moments">Moments</a><a href="#contact">Contact</a>
     </nav>
     <button class="menu" id="menu" aria-expanded="false" aria-controls="navlinks">Menu</button>
   </div>
@@ -180,6 +197,42 @@ footer{padding:28px 0;color:var(--muted);font-size:.85rem}
         <article><div class="date">2019 — 2024</div><h3>BS–MS in Chemistry, Minor in Physics</h3><p>Indian Institute of Science Education and Research (IISER) Tirupati, India</p></article>
       </div>
       <div class="note">This is an initial portfolio draft based on the academic and research information available. Publications, conference presentations, supervisor-approved project wording and profile links can be added when ready.</div>
+    </div>
+  </section>
+
+
+  <section id="moments">
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="kicker">Moments & milestones</div><h2>Places, people<br>and scientific milestones.</h2></div>
+        <p class="section-intro">A few moments from my academic journey, research presentations and life in and beyond the laboratory.</p>
+      </div>
+      <div class="moments-grid">
+        <figure class="moment-card">
+          <img src="images/cam_talk_under1mb.jpg" alt="Presenting research at the Cavendish Laboratory, University of Cambridge">
+          <figcaption><h3>Research presentation · Cambridge</h3>
+            <p>Delivering my research presentation, <em>Molecule Surface Energy Transfer in a Reactive System</em>, on Tuesday, 4 August 2026, at the Cavendish Laboratory, University of Cambridge, UK.</p>
+          </figcaption>
+        </figure>
+        <figure class="moment-card">
+          <img src="images/cam_dna_under1mb.jpg" alt="DNA history plaque at The Eagle in Cambridge">
+          <figcaption><h3>A landmark in the history of DNA · Cambridge</h3>
+            <p>At The Eagle in Cambridge, near the Old Cavendish Laboratory, where Francis Crick and James Watson celebrated the discovery of the double-helix structure of DNA on 28 February 1953. The discovery also relied on important contributions from Rosalind Franklin, Maurice Wilkins and other scientists.</p>
+          </figcaption>
+        </figure>
+        <figure class="moment-card">
+          <img src="images/iiser_chem_lab_under1mb.jpg" alt="Chemistry laboratory at IISER Tirupati Transit Campus">
+          <figcaption><h3>Back to the beginnings · IISER Tirupati</h3>
+            <p>A moment from the Chemistry Laboratory at the Transit Campus, IISER Tirupati, in 2023 — part of my journey in science.</p>
+          </figcaption>
+        </figure>
+        <figure class="moment-card">
+          <img src="images/mumbles_swansea_under1mb.jpg" alt="Peaceful coastal view at Mumbles, Swansea">
+          <figcaption><h3>A peaceful escape · Mumbles, Swansea</h3>
+            <p>A beautiful and peaceful view of Mumbles, Swansea, where the coastline, open skies and gentle seaside atmosphere make it a lovely place to unwind.</p>
+          </figcaption>
+        </figure>
+      </div>
     </div>
   </section>
 
