@@ -57,6 +57,29 @@ h1 span{color:var(--accent)}
 .ripple{transform-origin:center;animation:rip 4.2s ease-out infinite;opacity:0}
 @keyframes rip{0%,44%{opacity:0;transform:scale(.6)}50%{opacity:.7}100%{opacity:0;transform:scale(1.8)}}
 
+/* hero with lab photo */
+.herobg{background:linear-gradient(90deg,rgba(8,16,13,.88) 0%,rgba(8,16,13,.66) 55%,rgba(8,16,13,.42) 100%),url('images/iiser_chem_lab_under1mb.jpg') center/cover no-repeat;color:#fff}
+.herobg h1{color:#fff}
+.herobg h1 span{color:#6fe3bb}
+.herobg .lead{color:rgba(255,255,255,.86)}
+.herobg .tag{background:rgba(255,255,255,.14);color:#fff;backdrop-filter:blur(6px)}
+.herobg .btn{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.35)}
+.herobg .btn:hover{color:#fff}
+.herobg .btn.fill{background:#fff;color:#0b3d2e;border-color:#fff}
+.herobg .art{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.22);backdrop-filter:blur(8px)}
+.herobg .art p{color:rgba(255,255,255,.8)}
+.herobg .art svg g[fill]{color:rgba(255,255,255,.2)!important}
+.herobg .hero{padding:96px 0 88px}
+
+/* scholar */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:16px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;text-align:center}
+.stat b{display:block;font-family:var(--serif);font-size:2.4rem;line-height:1.1;color:var(--accent)}
+.stat span{font-size:.85rem;color:var(--muted)}
+.scholar-links{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:20px}
+.scholar-note{color:var(--muted);font-size:.85rem}
+@media(max-width:560px){.stats{grid-template-columns:1fr}}
+
 /* sections */
 section{padding:68px 0;border-top:1px solid var(--line)}
 .head{margin-bottom:30px;max-width:640px}
@@ -144,6 +167,7 @@ footer{padding:30px 0 40px;color:var(--muted);font-size:.85rem;text-align:center
       <a href="#research">Research</a>
       <a href="#work">Experience</a>
       <a href="#papers">Publications</a>
+      <a href="#scholar">Scholar</a>
       <a href="#skills">Skills</a>
       <a href="#photos">Photos</a>
       <a href="#contact">Contact</a>
@@ -153,6 +177,7 @@ footer{padding:30px 0 40px;color:var(--muted);font-size:.85rem;text-align:center
 </header>
 
 <main id="top">
+  <div class="herobg">
   <div class="wrap hero">
     <div>
       <span class="tag">PhD student · Swansea University</span>
@@ -178,6 +203,7 @@ footer{padding:30px 0 40px;color:var(--muted);font-size:.85rem;text-align:center
       </svg>
       <p>A D₂ molecule scattering from Ni(111)</p>
     </div>
+  </div>
   </div>
 
   <section id="about">
@@ -280,12 +306,12 @@ footer{padding:30px 0 40px;color:var(--muted);font-size:.85rem;text-align:center
       <div class="head"><div class="eyebrow">Publications & talks</div><h2>Papers and presentations</h2></div>
       <div class="acc">
         <details>
-          <summary><div class="t"><b>Publications</b><small>4 papers: 2 published, 1 under review, 1 in preparation</small></div></summary>
+          <summary><div class="t"><b>Publications</b><small>3 published papers, 1 in preparation</small></div></summary>
           <div class="body">
             <ul>
               <li><strong>Sajeev-Sheeja A</strong>, Smorodina E, Zhang S (2023). Structural bioinformatics studies of bacterial outer membrane beta-barrel transporters and their AlphaFold2 predicted water-soluble QTY variants. <em>PLOS ONE</em> 18(8). <a href="https://doi.org/10.1371/journal.pone.0290360">doi</a></li>
-              <li><strong>Sajeev-Sheeja A</strong>, Zhang S. Structural molecular modeling of bacterial integral protein enzymes and their AlphaFold2 predicted water-soluble QTY variants. <a href="https://doi.org/10.1007/s42485-024-00170-8">doi</a></li>
-              <li><strong>Sajeev-Sheeja A</strong>, Zhang S. Molecular dynamics simulations and structural bioinformatics of bacterial integral alpha-helical membrane enzymes and their AlphaFold2-predicted water-soluble QTY variants. <span class="status">Under review</span></li>
+              <li><strong>Sajeev-Sheeja A</strong>, Karagöl A, Karagöl T, Zhang S (2025). Molecular dynamics simulations and structural bioinformatics of bacterial integral alpha-helical membrane enzymes and their AlphaFold2-predicted water-soluble QTY analogues. <em>Molecular Simulation</em> 51(15), 984–998.</li>
+              <li><strong>Sajeev-Sheeja A</strong>, Zhang S (2024). Structural molecular modeling of bacterial integral membrane protein enzymes and their AlphaFold2 predicted water-soluble QTY variants. <em>Journal of Proteins and Proteomics</em> 15(4), 635–645. <a href="https://doi.org/10.1007/s42485-024-00170-8">doi</a></li>
               <li>Krishna A, <strong>Sajeev-Sheeja A</strong>, Zhang S (2025). Structural bioinformatics studies of beta-helix enzymes and their QTY variants. <span class="status">In preparation</span></li>
             </ul>
           </div>
@@ -301,6 +327,21 @@ footer{padding:30px 0 40px;color:var(--muted);font-size:.85rem;text-align:center
             </ul>
           </div>
         </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="scholar">
+    <div class="wrap">
+      <div class="head"><div class="eyebrow">Google Scholar</div><h2>Citations so far</h2><p>My protein-modelling papers with Prof. Shuguang Zhang's group at MIT.</p></div>
+      <div class="stats">
+        <div class="stat"><b>31</b><span>Citations</span></div>
+        <div class="stat"><b>3</b><span>h-index</span></div>
+        <div class="stat"><b>2</b><span>i10-index</span></div>
+      </div>
+      <div class="scholar-links">
+        <a class="btn fill" href="https://scholar.google.com/citations?user=3RnEJKoAAAAJ&hl=en" target="_blank" rel="noopener">View my Google Scholar profile ↗</a>
+        <span class="scholar-note">Figures as of October 2026.</span>
       </div>
     </div>
   </section>
@@ -350,6 +391,7 @@ footer{padding:30px 0 40px;color:var(--muted);font-size:.85rem;text-align:center
           <div class="links">
             <a href="https://www.linkedin.com/in/akash-s-s-b77089206/">LinkedIn</a>
             <a href="https://orcid.org/0000-0002-1138-2521">ORCID</a>
+            <a href="https://scholar.google.com/citations?user=3RnEJKoAAAAJ&hl=en">Google Scholar</a>
           </div>
         </div>
         <a class="btn" href="mailto:akashss@students.iisertirupati.ac.in">Email me</a>
