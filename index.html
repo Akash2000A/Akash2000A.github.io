@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b1020">
+<meta name="description" content="Academic portfolio of Akash S. S. — PhD researcher in molecular surface dynamics, molecule–surface energy transfer, and helium spin-echo scattering.">
+<title>Akash S. S. | PhD Researcher</title>
+<style>
+:root{--bg:#0b1020;--panel:#111a2e;--panel2:#15213a;--text:#edf2ff;--muted:#aab7d1;--line:rgba(202,216,255,.14);--accent:#8ce4d5;--accent2:#9db8ff;--max:1120px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(ellipse at 85% 0%,#1b2b4b 0,transparent 34%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+header{position:sticky;top:0;z-index:10;background:rgba(11,16,32,.82);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-weight:750;letter-spacing:.02em}
+.brand span{color:var(--accent)}
+nav{display:flex;gap:24px;align-items:center;font-size:.93rem;color:var(--muted)}
+nav a:hover{color:var(--text)}
+.menu{display:none;background:none;border:1px solid var(--line);border-radius:10px;color:var(--text);padding:8px 11px}
+.hero{padding:100px 0 76px;display:grid;grid-template-columns:1.35fr .65fr;gap:52px;align-items:center}
+.eyebrow{color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:.15em;font-size:.78rem}
+h1{font-size:clamp(2.8rem,7vw,5.3rem);line-height:1.02;letter-spacing:-.055em;margin:18px 0 22px}
+h1 em{font-style:normal;color:var(--accent)}
+.lead{font-size:1.16rem;max-width:680px;color:#c7d2e8}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:12px 19px;font-weight:700;border:1px solid var(--line);transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{background:var(--accent);color:#08131d;border-color:var(--accent)}
+.hero-card{border:1px solid var(--line);border-radius:26px;padding:26px;background:linear-gradient(145deg,rgba(140,228,213,.09),rgba(157,184,255,.05));box-shadow:0 24px 80px rgba(0,0,0,.18)}
+.orbit{height:170px;display:grid;place-items:center;position:relative;overflow:hidden;border-radius:18px;background:radial-gradient(circle at center,rgba(140,228,213,.13),transparent 62%)}
+.orbit:before,.orbit:after{content:"";position:absolute;border:1px solid rgba(140,228,213,.38);border-radius:50%;width:210px;height:72px;transform:rotate(-28deg)}
+.orbit:after{transform:rotate(42deg);border-color:rgba(157,184,255,.45)}
+.atom{width:14px;height:14px;border-radius:50%;background:var(--accent);box-shadow:0 0 32px var(--accent);z-index:1}
+.card-label{color:var(--muted);font-size:.82rem;margin:19px 0 5px}
+.card-title{font-weight:700;font-size:1.08rem}
+.quickfacts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+.fact{padding:13px;border-radius:14px;background:rgba(255,255,255,.035);border:1px solid var(--line)}
+.fact strong{display:block;font-size:1.2rem;color:var(--accent)}
+.fact span{font-size:.78rem;color:var(--muted)}
+section{padding:72px 0;border-top:1px solid var(--line)}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:30px}
+.kicker{font-size:.78rem;text-transform:uppercase;letter-spacing:.14em;color:var(--accent);font-weight:700}
+h2{font-size:clamp(1.9rem,4vw,3rem);line-height:1.12;letter-spacing:-.04em;margin:8px 0 0}
+.section-intro{max-width:510px;color:var(--muted);margin:0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:24px}
+.card .icon{font-size:1.45rem;margin-bottom:18px}
+.card h3{margin:0 0 9px;font-size:1.12rem}
+.card p{color:var(--muted);font-size:.96rem;margin:0}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.tag{border:1px solid var(--line);border-radius:999px;padding:5px 10px;font-size:.78rem;color:#c5d3eb}
+.research{display:grid;grid-template-columns:.7fr 1.3fr;gap:20px}
+.research-aside{background:linear-gradient(150deg,#173248,#131b31);border:1px solid var(--line);border-radius:22px;padding:26px}
+.research-aside p{color:var(--muted)}
+.research-main{display:grid;gap:14px}
+.research-item{display:grid;grid-template-columns:42px 1fr;gap:16px;background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:20px}
+.num{width:38px;height:38px;border-radius:12px;background:rgba(140,228,213,.12);color:var(--accent);display:grid;place-items:center;font-weight:800}
+.research-item h3{margin:0 0 5px}
+.research-item p{margin:0;color:var(--muted)}
+.timeline{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.timeline article{border-left:2px solid var(--accent);padding:5px 0 5px 20px}
+.timeline .date{color:var(--accent);font-size:.82rem;font-weight:750}
+.timeline h3{margin:5px 0}
+.timeline p{margin:0;color:var(--muted)}
+.note{margin-top:22px;padding:17px 20px;border-radius:14px;background:rgba(157,184,255,.07);border:1px solid var(--line);color:var(--muted);font-size:.9rem}
+.contact{display:flex;justify-content:space-between;align-items:center;gap:30px;background:linear-gradient(120deg,rgba(140,228,213,.1),rgba(157,184,255,.08));border:1px solid var(--line);border-radius:24px;padding:32px}
+.contact p{color:var(--muted);margin-bottom:0}
+footer{padding:28px 0;color:var(--muted);font-size:.85rem}
+.footer-inner{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:70px}.hero-card{max-width:480px}.grid{grid-template-columns:1fr}.research{grid-template-columns:1fr}.section-head{display:block}.section-intro{margin-top:15px}.timeline{grid-template-columns:1fr}.contact{align-items:flex-start;flex-direction:column}nav{display:none;position:absolute;top:72px;left:0;right:0;background:#0b1020;padding:20px;width:100%;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}nav.open{display:flex}.menu{display:block}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home">AKASH <span>S. S.</span></a>
+    <nav id="navlinks" aria-label="Main navigation">
+      <a href="#about">About</a><a href="#research">Research</a><a href="#skills">Methods</a><a href="#journey">Journey</a><a href="#contact">Contact</a>
+    </nav>
+    <button class="menu" id="menu" aria-expanded="false" aria-controls="navlinks">Menu</button>
+  </div>
+</header>
+<main>
+  <div class="wrap hero" id="home">
+    <div>
+      <div class="eyebrow">PhD Researcher · Surface Dynamics</div>
+      <h1>Understanding how<br>molecules <em>meet surfaces.</em></h1>
+      <p class="lead">I’m Akash S. S., a Chemistry PhD researcher at Swansea University investigating molecule–surface energy transfer and the dynamics of gas–surface interactions.</p>
+      <div class="actions">
+        <a class="btn primary" href="#research">Explore my research ↓</a>
+        <a class="btn" href="#contact">Get in touch</a>
+      </div>
+    </div>
+    <aside class="hero-card" aria-label="Research summary">
+      <div class="orbit"><div class="atom"></div></div>
+      <div class="card-label">Current research focus</div>
+      <div class="card-title">Molecule–surface energy transfer</div>
+      <div class="quickfacts">
+        <div class="fact"><strong>HeSE</strong><span>Scattering technique</span></div>
+        <div class="fact"><strong>Ni(111)</strong><span>Reactive surface</span></div>
+        <div class="fact"><strong>D₂</strong><span>Model molecule</span></div>
+        <div class="fact"><strong>MATLAB</strong><span>Data analysis</span></div>
+      </div>
+    </aside>
+  </div>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="kicker">About</div><h2>Curiosity, measurement,<br>and careful analysis.</h2></div>
+        <p class="section-intro">My work connects molecular physics, surface chemistry and data-driven analysis to understand how energy moves during molecule–surface collisions.</p>
+      </div>
+      <div class="grid">
+        <article class="card"><div class="icon">⌁</div><h3>Research</h3><p>Studying low-energy energy-transfer processes and surface excitations in gas–surface scattering.</p></article>
+        <article class="card"><div class="icon">∿</div><h3>Experiment</h3><p>Working with helium spin-echo measurements and molecular-beam scattering data.</p></article>
+        <article class="card"><div class="icon">⌘</div><h3>Computational thinking</h3><p>Building reproducible MATLAB workflows for fitting, Monte Carlo uncertainty analysis and visualisation.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="research">
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="kicker">Research</div><h2>From scattering data<br>to physical insight.</h2></div>
+        <p class="section-intro">A central question in my project is how molecular motion and surface vibrations contribute to energy exchange during collisions.</p>
+      </div>
+      <div class="research">
+        <aside class="research-aside">
+          <div class="kicker">Project theme</div>
+          <h3 style="font-size:1.55rem;line-height:1.2">Using rotations to control gas–surface reactions</h3>
+          <p>The broader goal is to understand how molecular degrees of freedom influence interactions with reactive surfaces, with future opportunities to explore rotational-state control.</p>
+          <div class="tags"><span class="tag">Surface dynamics</span><span class="tag">Molecular scattering</span><span class="tag">Energy transfer</span></div>
+        </aside>
+        <div class="research-main">
+          <article class="research-item"><div class="num">01</div><div><h3>Energy transfer at Ni(111)</h3><p>Analysing D₂ scattering from a nickel surface to investigate energy exchange with surface excitations in a reactive system.</p></div></article>
+          <article class="research-item"><div class="num">02</div><div><h3>Rayleigh and longitudinal modes</h3><p>Examining spectral features associated with surface vibrational modes and comparing their fitted contributions.</p></div></article>
+          <article class="research-item"><div class="num">03</div><div><h3>Uncertainty-aware fitting</h3><p>Using Lorentzian models and Monte Carlo resampling to assess fitted peak positions, widths, intensities and derived quantities such as ΔK.</p></div></article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="kicker">Methods & tools</div><h2>How I work.</h2></div>
+        <p class="section-intro">A combination of experimental science, numerical analysis and clear scientific communication.</p>
+      </div>
+      <div class="grid">
+        <article class="card"><h3>Experimental analysis</h3><p>Helium spin-echo (HeSE), molecular-beam scattering, energy-transfer spectra and momentum-transfer analysis.</p><div class="tags"><span class="tag">HeSE</span><span class="tag">MMI</span><span class="tag">Spectra</span></div></article>
+        <article class="card"><h3>Numerical methods</h3><p>Nonlinear least-squares fitting, Lorentzian models, Monte Carlo simulations, uncertainty propagation and parameter diagnostics.</p><div class="tags"><span class="tag">MATLAB</span><span class="tag">lsqcurvefit</span><span class="tag">Error analysis</span></div></article>
+        <article class="card"><h3>Scientific communication</h3><p>Turning complex measurements and analysis into figures, posters, reports and explanations that make the reasoning clear.</p><div class="tags"><span class="tag">Visualisation</span><span class="tag">Posters</span><span class="tag">Reports</span></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="journey">
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="kicker">Academic journey</div><h2>A foundation in chemistry<br>and physics.</h2></div>
+        <p class="section-intro">My training brings together chemical understanding and physical approaches to molecular behaviour.</p>
+      </div>
+      <div class="timeline">
+        <article><div class="date">2025 — Present</div><h3>PhD in Chemistry</h3><p>Swansea University, UK · Surface Dynamics Lab</p></article>
+        <article><div class="date">2019 — 2024</div><h3>BS–MS in Chemistry, Minor in Physics</h3><p>Indian Institute of Science Education and Research (IISER) Tirupati, India</p></article>
+      </div>
+      <div class="note">This is an initial portfolio draft based on the academic and research information available. Publications, conference presentations, supervisor-approved project wording and profile links can be added when ready.</div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact">
+        <div><div class="kicker">Contact</div><h2>Let’s talk science.</h2><p>For research discussions, collaborations or academic connections, you can add your preferred professional contact details here.</p></div>
+        <a class="btn primary" href="mailto:">Add email address ↗</a>
+      </div>
+      <p style="color:var(--muted);font-size:.85rem;margin:14px 4px 0">Before publishing, replace the email link with your professional email and add any public profiles you want to share.</p>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap footer-inner"><span>© <span id="year"></span> Akash S. S.</span><span>Built as a clean, responsive academic portfolio.</span></div></footer>
+<script>
+const menu=document.getElementById('menu');
+const nav=document.getElementById('navlinks');
+menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');}));
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
