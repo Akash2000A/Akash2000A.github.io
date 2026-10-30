@@ -3,235 +3,340 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0f172a">
-<meta name="description" content="Academic portfolio of Akash S. S. — PhD researcher in molecular surface dynamics, molecule–surface energy transfer, and helium spin-echo scattering.">
-<title>Akash S. S. | PhD Researcher</title>
+<meta name="description" content="Akash Sajeev Sheeja, PhD student in physical chemistry at Swansea University. Molecule–surface scattering and helium spin-echo.">
+<title>Akash Sajeev Sheeja</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#0f172a;
-  --panel:#1e293b;
-  --panel2:#334155;
-  --text:#f8fafc;
-  --muted:#94a3b8;
-  --line:rgba(255,255,255,.1);
-  --accent:#10b981;
-  --accent2:#3b82f6;
-  --max:1120px
+  --bg:#faf8f4; --surface:#ffffff; --ink:#1c2420; --muted:#5f6b64; --line:#e6e1d6;
+  --accent:#0f6b52; --accent-soft:#e3f1ec; --warm:#c8743a;
+  --radius:18px; --max:1040px;
+  --serif:"Fraunces",Georgia,serif; --sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{ --bg:#101612; --surface:#18201b; --ink:#eef2ee; --muted:#9aa89f; --line:#2a352e; --accent:#4cc9a0; --accent-soft:#16302a; --warm:#e49a63; }
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:radial-gradient(ellipse at 85% 0%,#1e293b 0,transparent 34%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65}
-a{color:inherit;text-decoration:none}
-a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
-.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
-header{position:sticky;top:0;z-index:10;background:rgba(15,23,42,.82);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
-.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.brand{font-weight:750;letter-spacing:.02em}
-.brand span{color:var(--accent)}
-nav{display:flex;gap:24px;align-items:center;font-size:.93rem;color:var(--muted)}
-nav a:hover{color:var(--text)}
-.menu{display:none;background:none;border:1px solid var(--line);border-radius:10px;color:var(--text);padding:8px 11px}
-.hero{padding:100px 0 76px;display:grid;grid-template-columns:1.35fr .65fr;gap:52px;align-items:center}
-.eyebrow{color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:.15em;font-size:.78rem}
-h1{font-size:clamp(2.8rem,7vw,5.3rem);line-height:1.02;letter-spacing:-.055em;margin:18px 0 22px}
-h1 em{font-style:normal;color:var(--accent)}
-.lead{font-size:1.16rem;max-width:680px;color:#c7d2e8}
-.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
-.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:12px 19px;font-weight:700;border:1px solid var(--line);transition:transform .2s,background .2s}
-.btn:hover{transform:translateY(-2px)}
-.btn.primary{background:var(--accent);color:#08131d;border-color:var(--accent)}
-.hero-card{border:1px solid var(--line);border-radius:26px;padding:26px;background:linear-gradient(145deg,rgba(16,185,129,.09),rgba(59,130,246,.05));box-shadow:0 24px 80px rgba(0,0,0,.18)}
-.orbit{height:170px;display:grid;place-items:center;position:relative;overflow:hidden;border-radius:18px;background:radial-gradient(circle at center,rgba(16,185,129,.13),transparent 62%)}
-.orbit:before,.orbit:after{content:"";position:absolute;border:1px solid rgba(16,185,129,.38);border-radius:50%;width:210px;height:72px;transform:rotate(-28deg)}
-.orbit:after{transform:rotate(42deg);border-color:rgba(59,130,246,.45)}
-.atom{width:14px;height:14px;border-radius:50%;background:var(--accent);box-shadow:0 0 32px var(--accent);z-index:1}
-.card-label{color:var(--muted);font-size:.82rem;margin:19px 0 5px}
-.card-title{font-weight:700;font-size:1.08rem}
-.quickfacts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
-.fact{padding:13px;border-radius:14px;background:rgba(255,255,255,.035);border:1px solid var(--line)}
-.fact strong{display:block;font-size:1.2rem;color:var(--accent)}
-.fact span{font-size:.78rem;color:var(--muted)}
-section{padding:72px 0;border-top:1px solid var(--line)}
-.section-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:30px}
-.kicker{font-size:.78rem;text-transform:uppercase;letter-spacing:.14em;color:var(--accent);font-weight:700}
-h2{font-size:clamp(1.9rem,4vw,3rem);line-height:1.12;letter-spacing:-.04em;margin:8px 0 0}
-.section-intro{max-width:510px;color:var(--muted);margin:0}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:24px}
-.card .icon{font-size:1.45rem;margin-bottom:18px}
-.card h3{margin:0 0 9px;font-size:1.12rem}
-.card p{color:var(--muted);font-size:.96rem;margin:0}
-.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
-.tag{border:1px solid var(--line);border-radius:999px;padding:5px 10px;font-size:.78rem;color:#c5d3eb}
-.research{display:grid;grid-template-columns:.7fr 1.3fr;gap:20px}
-.research-aside{background:linear-gradient(150deg,#1e293b,#0f172a);border:1px solid var(--line);border-radius:22px;padding:26px}
-.research-aside p{color:var(--muted)}
-.research-main{display:grid;gap:14px}
-.research-item{display:grid;grid-template-columns:42px 1fr;gap:16px;background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:20px}
-.num{width:38px;height:38px;border-radius:12px;background:rgba(16,185,129,.12);color:var(--accent);display:grid;place-items:center;font-weight:800}
-.research-item h3{margin:0 0 5px}
-.research-item p{margin:0;color:var(--muted)}
-.timeline{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-.timeline article{border-left:2px solid var(--accent);padding:5px 0 5px 20px}
-.timeline .date{color:var(--accent);font-size:.82rem;font-weight:750}
-.timeline h3{margin:5px 0}
-.timeline p{margin:0;color:var(--muted)}
-.note{margin-top:22px;padding:17px 20px;border-radius:14px;background:rgba(59,130,246,.07);border:1px solid var(--line);color:var(--muted);font-size:.9rem}
-.contact{display:flex;justify-content:space-between;align-items:center;gap:30px;background:linear-gradient(120deg,rgba(16,185,129,.1),rgba(59,130,246,.08));border:1px solid var(--line);border-radius:24px;padding:32px}
-.contact p{color:var(--muted);margin-bottom:0}
-footer{padding:28px 0;color:var(--muted);font-size:.85rem}
-.footer-inner{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.7;font-size:16.5px;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{color:var(--warm)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{width:min(var(--max),calc(100% - 40px));margin:0 auto}
 
-.moments-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
-.moment-card{margin:0;overflow:hidden;background:var(--panel);border:1px solid var(--line);border-radius:20px}
-.moment-card img{display:block;width:100%;height:320px;object-fit:cover}
-.moment-card figcaption{padding:21px 23px 24px}
-.moment-card h3{margin:0 0 9px;font-size:1.08rem}
-.moment-card p{margin:0;color:var(--muted);font-size:.95rem}
+/* header */
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:var(--serif);font-weight:600;font-size:1.15rem;color:var(--ink);text-decoration:none}
+nav{display:flex;gap:26px}
+nav a{color:var(--muted);text-decoration:none;font-size:.92rem;font-weight:500}
+nav a:hover,nav a.on{color:var(--ink)}
+.burger{display:none;background:none;border:1px solid var(--line);color:var(--ink);border-radius:10px;padding:7px 12px;font:inherit;font-size:.9rem;cursor:pointer}
 
-@media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:70px}.hero-card{max-width:480px}.grid{grid-template-columns:1fr}.moments-grid{grid-template-columns:1fr}.moment-card img{height:auto;max-height:420px}.research{grid-template-columns:1fr}.section-head{display:block}.section-intro{margin-top:15px}.timeline{grid-template-columns:1fr}.contact{align-items:flex-start;flex-direction:column}nav{display:none;position:absolute;top:72px;left:0;right:0;background:#0f172a;padding:20px;width:100%;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}nav.open{display:flex}.menu{display:block}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
-
-/* IISER Tirupati Chemistry Lab hero background */
-.hero {
-  background-image: linear-gradient(90deg, rgba(8, 13, 22, .82) 0%, rgba(8, 13, 22, .58) 52%, rgba(8, 13, 22, .28) 100%), url('images/iiser_chem_lab_under1mb.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+/* hero */
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:56px;align-items:center;padding:84px 0 72px}
+.tag{display:inline-block;background:var(--accent-soft);color:var(--accent);font-size:.82rem;font-weight:600;padding:5px 13px;border-radius:99px}
+h1{font-family:var(--serif);font-weight:600;font-size:clamp(2.5rem,6vw,4.1rem);line-height:1.08;letter-spacing:-.02em;margin:20px 0 18px}
+h1 span{color:var(--accent)}
+.lead{font-size:1.14rem;color:var(--muted);max-width:560px;margin:0}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-block;padding:11px 22px;border-radius:99px;font-weight:600;font-size:.95rem;text-decoration:none;border:1px solid var(--line);color:var(--ink);background:var(--surface);transition:transform .15s}
+.btn:hover{transform:translateY(-2px);color:var(--ink)}
+.btn.fill{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.fill:hover{color:#fff}
+.art{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:16px}
+.art svg{display:block;width:100%;height:auto}
+.art p{margin:10px 6px 4px;font-size:.82rem;color:var(--muted);text-align:center}
+.mol{animation:hit 4.2s ease-in-out infinite}
+@keyframes hit{
+  0%{transform:translate(0,0)} 45%{transform:translate(120px,150px)}
+  100%{transform:translate(240px,0)}
 }
+.ripple{transform-origin:center;animation:rip 4.2s ease-out infinite;opacity:0}
+@keyframes rip{0%,44%{opacity:0;transform:scale(.6)}50%{opacity:.7}100%{opacity:0;transform:scale(1.8)}}
 
+/* sections */
+section{padding:68px 0;border-top:1px solid var(--line)}
+.head{margin-bottom:30px;max-width:640px}
+.eyebrow{font-size:.8rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--warm)}
+h2{font-family:var(--serif);font-weight:600;font-size:clamp(1.8rem,4vw,2.5rem);line-height:1.15;letter-spacing:-.015em;margin:8px 0 10px}
+.head p{color:var(--muted);margin:0}
+
+.about{display:grid;grid-template-columns:1.3fr .7fr;gap:40px}
+.about p{margin:0 0 16px}
+.facts{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;align-self:start}
+.facts dt{font-size:.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-top:14px}
+.facts dt:first-child{margin-top:0}
+.facts dd{margin:2px 0 0;font-weight:500}
+
+/* accordion */
+.acc{display:grid;gap:12px}
+details{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);transition:border-color .2s,box-shadow .2s}
+details[open]{border-color:var(--accent);box-shadow:0 10px 34px -20px rgba(15,107,82,.45)}
+summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:16px;padding:20px 24px}
+summary::-webkit-details-marker{display:none}
+summary .t{flex:1}
+summary .t b{display:block;font-family:var(--serif);font-weight:600;font-size:1.12rem;line-height:1.3}
+summary .t small{display:block;color:var(--muted);font-size:.88rem;margin-top:2px}
+summary .when{color:var(--muted);font-size:.85rem;white-space:nowrap}
+summary::after{content:"+";flex:none;width:30px;height:30px;border-radius:50%;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-size:1.2rem;line-height:1;transition:transform .25s}
+details[open] summary::after{transform:rotate(45deg)}
+.body{padding:0 24px 24px;color:var(--muted)}
+.body p{margin:0 0 12px}
+.body ul{margin:0;padding-left:20px}
+.body li{margin-bottom:7px}
+.body strong{color:var(--ink);font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:6px}
+.chips span{background:var(--bg);border:1px solid var(--line);border-radius:99px;padding:4px 12px;font-size:.84rem;color:var(--ink)}
+.status{display:inline-block;font-size:.76rem;font-weight:600;padding:2px 10px;border-radius:99px;background:var(--accent-soft);color:var(--accent);margin-left:6px;vertical-align:1px}
+.toolbar{display:flex;justify-content:flex-end;margin-bottom:12px}
+.toolbar button{background:none;border:none;color:var(--accent);font:inherit;font-size:.88rem;font-weight:600;cursor:pointer;padding:4px 2px}
+.toolbar button:hover{color:var(--warm)}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.shot{position:relative;border:0;padding:0;border-radius:var(--radius);overflow:hidden;cursor:pointer;aspect-ratio:4/5;background:var(--line);text-align:left}
+.shot img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+.shot:hover img{transform:scale(1.05)}
+.shot span{position:absolute;inset:auto 0 0 0;padding:34px 14px 13px;color:#fff;font-size:.9rem;font-weight:600;line-height:1.3;background:linear-gradient(transparent,rgba(0,0,0,.72))}
+dialog{border:0;border-radius:22px;padding:0;width:min(780px,calc(100% - 28px));background:var(--surface);color:var(--ink)}
+dialog::backdrop{background:rgba(8,12,10,.72)}
+dialog img{display:block;width:100%;max-height:62vh;object-fit:cover}
+.cap{padding:20px 26px 26px}
+.cap h3{font-family:var(--serif);margin:0 0 6px;font-size:1.25rem}
+.cap p{margin:0;color:var(--muted);font-size:.96rem}
+.close{position:absolute;top:12px;right:12px;width:36px;height:36px;border-radius:50%;border:0;background:rgba(0,0,0,.55);color:#fff;font-size:1.2rem;cursor:pointer}
+
+/* contact */
+.contact{background:var(--accent);color:#fff;border-radius:26px;padding:44px;display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap}
+.contact h2{margin:0 0 6px;color:#fff}
+.contact p{margin:0;opacity:.88}
+.contact .btn{background:#fff;color:#0b3d2e;border-color:#fff}
+.links{display:flex;gap:14px;flex-wrap:wrap;margin-top:16px}
+.links a{color:#fff;font-size:.92rem;font-weight:500}
+footer{padding:30px 0 40px;color:var(--muted);font-size:.85rem;text-align:center}
+
+@media(max-width:860px){
+  .hero,.about{grid-template-columns:1fr;gap:34px}
+  .hero{padding:52px 0 48px}
+  .gallery{grid-template-columns:repeat(2,1fr)}
+  .burger{display:block}
+  nav{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:8px 20px 14px}
+  nav.open{display:flex}
+  nav a{padding:11px 0}
+  summary{padding:17px 18px}
+  summary .when{display:none}
+  .body{padding:0 18px 20px}
+  .contact{padding:30px 24px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
+
 <header>
-  <div class="wrap nav">
-    <a class="brand" href="#home">AKASH <span>S. S.</span></a>
-    <nav id="navlinks" aria-label="Main navigation">
-      <a href="#about">About</a><a href="#research">Research</a><a href="#skills">Methods</a><a href="#journey">Journey</a><a href="#moments">Moments</a><a href="#contact">Contact</a>
+  <div class="wrap bar">
+    <a class="logo" href="#top">Akash Sajeev Sheeja</a>
+    <nav id="nav" aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#work">Experience</a>
+      <a href="#papers">Publications</a>
+      <a href="#skills">Skills</a>
+      <a href="#photos">Photos</a>
+      <a href="#contact">Contact</a>
     </nav>
-    <button class="menu" id="menu" aria-expanded="false" aria-controls="navlinks">Menu</button>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="nav">Menu</button>
   </div>
 </header>
-<main>
-  <div class="wrap hero" id="home">
+
+<main id="top">
+  <div class="wrap hero">
     <div>
-      <div class="eyebrow">PhD Researcher · Surface Dynamics</div>
-      <h1>Understanding how<br>molecules <em>meet surfaces.</em></h1>
-      <p class="lead">I’m Akash S. S., a Chemistry PhD researcher at Swansea University investigating molecule–surface energy transfer and the dynamics of gas–surface interactions.</p>
-      <div class="actions">
-        <a class="btn primary" href="#research">Explore my research ↓</a>
+      <span class="tag">PhD student · Swansea University</span>
+      <h1>I study what happens when a molecule <span>hits a surface.</span></h1>
+      <p class="lead">I'm a physical chemist in the Surface Dynamics group at Swansea. I fire deuterium molecules at nickel and work out where the energy goes.</p>
+      <div class="btns">
+        <a class="btn fill" href="#research">See my research</a>
         <a class="btn" href="#contact">Get in touch</a>
       </div>
     </div>
-    <aside class="hero-card" aria-label="Research summary">
-      <div class="orbit"><div class="atom"></div></div>
-      <div class="card-label">Current research focus</div>
-      <div class="card-title">Molecule–surface energy transfer</div>
-      <div class="quickfacts">
-        <div class="fact"><strong>HeSE</strong><span>Scattering technique</span></div>
-        <div class="fact"><strong>Ni(111)</strong><span>Reactive surface</span></div>
-        <div class="fact"><strong>D₂</strong><span>Model molecule</span></div>
-        <div class="fact"><strong>MATLAB</strong><span>Data analysis</span></div>
-      </div>
-    </aside>
+    <div class="art" aria-hidden="true">
+      <svg viewBox="0 0 400 300">
+        <g fill="currentColor" style="color:var(--line)">
+          <circle cx="40" cy="250" r="22"/><circle cx="100" cy="250" r="22"/><circle cx="160" cy="250" r="22"/><circle cx="220" cy="250" r="22"/><circle cx="280" cy="250" r="22"/><circle cx="340" cy="250" r="22"/><circle cx="400" cy="250" r="22"/>
+          <circle cx="70" cy="290" r="22"/><circle cx="130" cy="290" r="22"/><circle cx="190" cy="290" r="22"/><circle cx="250" cy="290" r="22"/><circle cx="310" cy="290" r="22"/><circle cx="370" cy="290" r="22"/>
+        </g>
+        <circle class="ripple" cx="190" cy="250" r="40" fill="none" stroke="var(--accent)" stroke-width="2"/>
+        <g class="mol" style="transform-box:fill-box">
+          <g transform="translate(40,60)">
+            <circle cx="0" cy="0" r="11" fill="var(--accent)"/><circle cx="20" cy="8" r="11" fill="var(--warm)"/>
+          </g>
+        </g>
+      </svg>
+      <p>A D₂ molecule scattering from Ni(111)</p>
+    </div>
   </div>
 
   <section id="about">
     <div class="wrap">
-      <div class="section-head">
-        <div><div class="kicker">About</div><h2>Curiosity, measurement,<br>and careful analysis.</h2></div>
-        <p class="section-intro">My work connects molecular physics, surface chemistry and data-driven analysis to understand how energy moves during molecule–surface collisions.</p>
-      </div>
-      <div class="grid">
-        <article class="card"><div class="icon">⌁</div><h3>Research</h3><p>Studying low-energy energy-transfer processes and surface excitations in gas–surface scattering.</p></article>
-        <article class="card"><div class="icon">∿</div><h3>Experiment</h3><p>Working with helium spin-echo measurements and molecular-beam scattering data.</p></article>
-        <article class="card"><div class="icon">⌘</div><h3>Computational thinking</h3><p>Building reproducible MATLAB workflows for fitting, Monte Carlo uncertainty analysis and visualisation.</p></article>
+      <div class="head"><div class="eyebrow">About</div><h2>A bit about me</h2></div>
+      <div class="about">
+        <div>
+          <p>I grew up in Kerala and did my BS–MS in Chemistry (with a minor in Physics) at IISER Tirupati. My early projects were quite varied: quantum dots for gas sensing, core–shell nanoparticles, and computational work on membrane proteins with Prof. Shuguang Zhang's group at MIT.</p>
+          <p>In 2025 I moved to Swansea to start a PhD in physical chemistry. Now I work on how molecules exchange energy with a metal surface when they collide, using helium spin-echo scattering and a lot of MATLAB.</p>
+          <p>Outside the lab I play table tennis, edit videos and enjoy teaching maths.</p>
+        </div>
+        <dl class="facts">
+          <dt>Currently</dt><dd>PhD, Swansea University (2025–2028)</dd>
+          <dt>Group</dt><dd>Surface Dynamics</dd>
+          <dt>Previously</dt><dd>IISER Tirupati · MIT · IGCAR · CSIR-IMTECH</dd>
+          <dt>Languages</dt><dd>Malayalam, English, Hindi, Tamil</dd>
+        </dl>
       </div>
     </div>
   </section>
 
   <section id="research">
     <div class="wrap">
-      <div class="section-head">
-        <div><div class="kicker">Research</div><h2>From scattering data<br>to physical insight.</h2></div>
-        <p class="section-intro">A central question in my project is how molecular motion and surface vibrations contribute to energy exchange during collisions.</p>
+      <div class="head"><div class="eyebrow">Research</div><h2>What I'm working on</h2><p>Tap a topic to read more.</p></div>
+      <div class="acc">
+        <details open>
+          <summary><div class="t"><b>Energy transfer in D₂ scattering from Ni(111)</b><small>Current PhD project</small></div><span class="when">2025 – now</span></summary>
+          <div class="body">
+            <p>When a molecule bounces off a metal, it can leave some energy behind as surface vibrations (phonons). Nickel is a reactive surface, so this exchange matters for catalysis. I analyse helium spin-echo data of D₂ on Ni(111) to see how much energy is exchanged, and with which surface modes.</p>
+            <div class="chips"><span>Helium spin-echo</span><span>Ni(111)</span><span>D₂</span><span>Phonons</span></div>
+          </div>
+        </details>
+        <details>
+          <summary><div class="t"><b>Rayleigh and longitudinal surface modes</b><small>Spectral analysis</small></div></summary>
+          <div class="body">
+            <p>The spectra show peaks from different vibrational modes of the surface. I fit them and compare how strongly each one takes part in the energy exchange.</p>
+          </div>
+        </details>
+        <details>
+          <summary><div class="t"><b>Fitting with proper error bars</b><small>Methods</small></div></summary>
+          <div class="body">
+            <p>I fit Lorentzian line shapes with nonlinear least squares, then use Monte Carlo resampling to put uncertainties on peak positions, widths, intensities and derived quantities such as the momentum transfer ΔK. Everything is scripted in MATLAB so it can be rerun from raw data.</p>
+          </div>
+        </details>
+        <details>
+          <summary><div class="t"><b>Where it's heading: rotational control</b><small>Longer-term direction</small></div></summary>
+          <div class="body">
+            <p>The bigger question is whether the rotational orientation of a molecule changes how it exchanges energy with a surface, and eventually whether we can use that to steer a surface reaction. I presented a poster on this at the FSE PGR Conference 2026 at Swansea.</p>
+          </div>
+        </details>
       </div>
-      <div class="research">
-        <aside class="research-aside">
-          <div class="kicker">Project theme</div>
-          <h3 style="font-size:1.55rem;line-height:1.2">Using rotations to control gas–surface reactions</h3>
-          <p>The broader goal is to understand how molecular degrees of freedom influence interactions with reactive surfaces, with future opportunities to explore rotational-state control.</p>
-          <div class="tags"><span class="tag">Surface dynamics</span><span class="tag">Molecular scattering</span><span class="tag">Energy transfer</span></div>
-        </aside>
-        <div class="research-main">
-          <article class="research-item"><div class="num">01</div><div><h3>Energy transfer at Ni(111)</h3><p>Analysing D₂ scattering from a nickel surface to investigate energy exchange with surface excitations in a reactive system.</p></div></article>
-          <article class="research-item"><div class="num">02</div><div><h3>Rayleigh and longitudinal modes</h3><p>Examining spectral features associated with surface vibrational modes and comparing their fitted contributions.</p></div></article>
-          <article class="research-item"><div class="num">03</div><div><h3>Uncertainty-aware fitting</h3><p>Using Lorentzian models and Monte Carlo resampling to assess fitted peak positions, widths, intensities and derived quantities such as ΔK.</p></div></article>
-        </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+      <div class="head"><div class="eyebrow">Experience</div><h2>Where I've worked and studied</h2></div>
+      <div class="toolbar"><button type="button" data-toggle="#work">Expand all</button></div>
+      <div class="acc">
+        <details>
+          <summary><div class="t"><b>PhD, Physical Chemistry</b><small>Swansea University</small></div><span class="when">2025 – 2028</span></summary>
+          <div class="body"><p>Surface Dynamics group, Faculty of Science and Engineering. Molecule–surface energy transfer measured with helium spin-echo.</p></div>
+        </details>
+        <details>
+          <summary><div class="t"><b>BS–MS Chemistry, minor in Physics</b><small>IISER Tirupati</small></div><span class="when">2019 – 2024</span></summary>
+          <div class="body"><p>Five-year integrated degree. My master's thesis was an online project with MIT on protein structure prediction and validation of the QTY code (thesis score 9.5/10).</p></div>
+        </details>
+        <details>
+          <summary><div class="t"><b>Research intern, Molecular Architecture and Design Lab</b><small>MIT (remote)</small></div><span class="when">2022 – 2024</span></summary>
+          <div class="body">
+            <ul>
+              <li>Studied beta-barrel, alpha-helical and beta-helix membrane proteins with Prof. Shuguang Zhang.</li>
+              <li>Used AlphaFold2 to model water-soluble QTY variants of 16 proteins.</li>
+              <li>Led to the papers listed below.</li>
+            </ul>
+          </div>
+        </details>
+        <details>
+          <summary><div class="t"><b>Project trainee</b><small>CSIR–Institute of Microbial Technology, Chandigarh</small></div><span class="when">2024</span></summary>
+          <div class="body"><p>Wet-lab work on purifying computationally designed QTY variants of beta-barrel membrane proteins, supervised by Dr. Krishan Gopal.</p></div>
+        </details>
+        <details>
+          <summary><div class="t"><b>Semester project, Soft and Active Matter Lab</b><small>IISER Tirupati</small></div><span class="when">2023</span></summary>
+          <div class="body"><p>Assembled core–shell nanoparticles with hematite cores and silica shells. Characterised them with DLS, ELS and optical microscopy.</p></div>
+        </details>
+        <details>
+          <summary><div class="t"><b>Research intern</b><small>Indira Gandhi Centre for Atomic Research, Kalpakkam</small></div><span class="when">2022</span></summary>
+          <div class="body"><p>Made and characterised SnO₂ quantum dots for gas sensing, and fabricated gold interdigitated electrodes on SiO₂ by RF sputtering.</p></div>
+        </details>
+        <details>
+          <summary><div class="t"><b>Project student</b><small>Indian Institute of Tropical Meteorology, Pune (remote)</small></div><span class="when">2022</span></summary>
+          <div class="body"><p>Data analysis and a presentation for the Cloud-Aerosol Interaction and Precipitation Enhancement Experiment.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="papers">
+    <div class="wrap">
+      <div class="head"><div class="eyebrow">Publications & talks</div><h2>Papers and presentations</h2></div>
+      <div class="acc">
+        <details>
+          <summary><div class="t"><b>Publications</b><small>4 papers: 2 published, 1 under review, 1 in preparation</small></div></summary>
+          <div class="body">
+            <ul>
+              <li><strong>Sajeev-Sheeja A</strong>, Smorodina E, Zhang S (2023). Structural bioinformatics studies of bacterial outer membrane beta-barrel transporters and their AlphaFold2 predicted water-soluble QTY variants. <em>PLOS ONE</em> 18(8). <a href="https://doi.org/10.1371/journal.pone.0290360">doi</a></li>
+              <li><strong>Sajeev-Sheeja A</strong>, Zhang S. Structural molecular modeling of bacterial integral protein enzymes and their AlphaFold2 predicted water-soluble QTY variants. <a href="https://doi.org/10.1007/s42485-024-00170-8">doi</a></li>
+              <li><strong>Sajeev-Sheeja A</strong>, Zhang S. Molecular dynamics simulations and structural bioinformatics of bacterial integral alpha-helical membrane enzymes and their AlphaFold2-predicted water-soluble QTY variants. <span class="status">Under review</span></li>
+              <li>Krishna A, <strong>Sajeev-Sheeja A</strong>, Zhang S (2025). Structural bioinformatics studies of beta-helix enzymes and their QTY variants. <span class="status">In preparation</span></li>
+            </ul>
+          </div>
+        </details>
+        <details>
+          <summary><div class="t"><b>Conferences and talks</b></div></summary>
+          <div class="body">
+            <ul>
+              <li><strong>FSE PGR Conference 2026</strong>, Swansea University. Poster: <em>Rotational Orientation Control of Molecule Surface Energy Transfer.</em></li>
+              <li><strong>University of Cambridge, Cavendish Laboratory</strong>, 4 August 2026. Talk: <em>Molecule Surface Energy Transfer in a Reactive System.</em></li>
+              <li><strong>ICATPDD 2024</strong>, Amsterdam. Invited to present a poster.</li>
+              <li><strong>AMR Research Conference 2024</strong>, Bengaluru (Tata Institute for Genetics and Society and NCBS). Paper submitted.</li>
+            </ul>
+          </div>
+        </details>
       </div>
     </div>
   </section>
 
   <section id="skills">
     <div class="wrap">
-      <div class="section-head">
-        <div><div class="kicker">Methods & tools</div><h2>How I work.</h2></div>
-        <p class="section-intro">A combination of experimental science, numerical analysis and clear scientific communication.</p>
-      </div>
-      <div class="grid">
-        <article class="card"><h3>Experimental analysis</h3><p>Helium spin-echo (HeSE), molecular-beam scattering, energy-transfer spectra and momentum-transfer analysis.</p><div class="tags"><span class="tag">HeSE</span><span class="tag">MMI</span><span class="tag">Spectra</span></div></article>
-        <article class="card"><h3>Numerical methods</h3><p>Nonlinear least-squares fitting, Lorentzian models, Monte Carlo simulations, uncertainty propagation and parameter diagnostics.</p><div class="tags"><span class="tag">MATLAB</span><span class="tag">lsqcurvefit</span><span class="tag">Error analysis</span></div></article>
-        <article class="card"><h3>Scientific communication</h3><p>Turning complex measurements and analysis into figures, posters, reports and explanations that make the reasoning clear.</p><div class="tags"><span class="tag">Visualisation</span><span class="tag">Posters</span><span class="tag">Reports</span></div></article>
+      <div class="head"><div class="eyebrow">Skills</div><h2>What I can do</h2></div>
+      <div class="acc">
+        <details>
+          <summary><div class="t"><b>Surface science and physical chemistry</b></div></summary>
+          <div class="body"><div class="chips"><span>Helium spin-echo</span><span>Magnetic molecular interferometry</span><span>Scanning tunnelling microscopy</span><span>XRD</span><span>Raman</span><span>UV–Vis</span><span>RF sputtering</span><span>Sol-gel synthesis</span></div></div>
+        </details>
+        <details>
+          <summary><div class="t"><b>Programming and analysis</b></div></summary>
+          <div class="body"><div class="chips"><span>MATLAB</span><span>Python</span><span>Origin</span><span>LaTeX</span><span>Linux</span></div></div>
+        </details>
+        <details>
+          <summary><div class="t"><b>Biochemistry and structural biology</b></div></summary>
+          <div class="body"><div class="chips"><span>AlphaFold</span><span>PyMOL</span><span>ChimeraX</span><span>CHARMM-GUI</span><span>Schrödinger</span><span>Foldseek</span><span>Cloning</span><span>Protein expression and purification</span><span>Chromatography</span><span>SDS-PAGE</span><span>CD spectroscopy</span></div></div>
+        </details>
+        <details>
+          <summary><div class="t"><b>Other</b></div></summary>
+          <div class="body"><div class="chips"><span>Video editing (Premiere Pro)</span><span>Teaching and tutoring maths</span><span>Scientific posters</span></div></div>
+        </details>
       </div>
     </div>
   </section>
 
-  <section id="journey">
+  <section id="photos">
     <div class="wrap">
-      <div class="section-head">
-        <div><div class="kicker">Academic journey</div><h2>A foundation in chemistry<br>and physics.</h2></div>
-        <p class="section-intro">My training brings together chemical understanding and physical approaches to molecular behaviour.</p>
-      </div>
-      <div class="timeline">
-        <article><div class="date">2025 — Present</div><h3>PhD in Chemistry</h3><p>Swansea University, UK · Surface Dynamics Lab</p></article>
-        <article><div class="date">2019 — 2024</div><h3>BS–MS in Chemistry, Minor in Physics</h3><p>Indian Institute of Science Education and Research (IISER) Tirupati, India</p></article>
-      </div>
-      <div class="note">This is an initial portfolio draft based on the academic and research information available. Publications, conference presentations, supervisor-approved project wording and profile links can be added when ready.</div>
-    </div>
-  </section>
-
-
-  <section id="moments">
-    <div class="wrap">
-      <div class="section-head">
-        <div><div class="kicker">Moments & milestones</div><h2>Places, people<br>and scientific milestones.</h2></div>
-        <p class="section-intro">A few moments from my academic journey, research presentations and life in and beyond the laboratory.</p>
-      </div>
-      <div class="moments-grid">
-        <figure class="moment-card">
-          <img src="images/cam_talk_under1mb.jpg" alt="Presenting research at the Cavendish Laboratory, University of Cambridge">
-          <figcaption><h3>Research presentation · Cambridge</h3>
-            <p>Delivering my research presentation, <em>Molecule Surface Energy Transfer in a Reactive System</em>, on Tuesday, 4 August 2026, at the Cavendish Laboratory, University of Cambridge, UK.</p>
-          </figcaption>
-        </figure>
-        <figure class="moment-card">
-          <img src="images/cam_dna_under1mb.jpg" alt="DNA history plaque at The Eagle in Cambridge">
-          <figcaption><h3>A landmark in the history of DNA · Cambridge</h3>
-            <p>At The Eagle in Cambridge, near the Old Cavendish Laboratory, where Francis Crick and James Watson celebrated the discovery of the double-helix structure of DNA on 28 February 1953. The discovery also relied on important contributions from Rosalind Franklin, Maurice Wilkins and other scientists.</p>
-          </figcaption>
-        </figure>
-        <figure class="moment-card">
-          <img src="images/iiser_chem_lab_under1mb.jpg" alt="Chemistry laboratory at IISER Tirupati Transit Campus">
-          <figcaption><h3>Back to the beginnings · IISER Tirupati</h3>
-            <p>A moment from the Chemistry Laboratory at the Transit Campus, IISER Tirupati, in 2023 — part of my journey in science.</p>
-          </figcaption>
-        </figure>
-        <figure class="moment-card">
-          <img src="images/mumbles_swansea_under1mb.jpg" alt="Peaceful coastal view at Mumbles, Swansea">
-          <figcaption><h3>A peaceful escape · Mumbles, Swansea</h3>
-            <p>A beautiful and peaceful view of Mumbles, Swansea, where the coastline, open skies and gentle seaside atmosphere make it a lovely place to unwind.</p>
-          </figcaption>
-        </figure>
+      <div class="head"><div class="eyebrow">Photos</div><h2>Moments along the way</h2><p>Click a photo to see the story behind it.</p></div>
+      <div class="gallery">
+        <button class="shot" data-img="images/cam_talk_under1mb.jpg" data-alt="Presenting at the Cavendish Laboratory, University of Cambridge" data-title="Talk at the Cavendish, Cambridge" data-text="Presenting 'Molecule Surface Energy Transfer in a Reactive System' at the Cavendish Laboratory, University of Cambridge, on 4 August 2026."><img src="images/cam_talk_under1mb.jpg" alt="Presenting at the Cavendish Laboratory" loading="lazy"><span>Talk at the Cavendish</span></button>
+        <button class="shot" data-img="images/cam_dna_under1mb.jpg" data-alt="DNA plaque at The Eagle pub in Cambridge" data-title="The Eagle, Cambridge" data-text="The pub near the old Cavendish where Crick and Watson announced the double helix on 28 February 1953. Rosalind Franklin, Maurice Wilkins and others made that discovery possible too."><img src="images/cam_dna_under1mb.jpg" alt="DNA plaque at The Eagle" loading="lazy"><span>The Eagle, Cambridge</span></button>
+        <button class="shot" data-img="images/iiser_chem_lab_under1mb.jpg" data-alt="Chemistry laboratory at IISER Tirupati Transit Campus" data-title="Where it started: IISER Tirupati" data-text="The chemistry lab at the Transit Campus, IISER Tirupati, in 2023."><img src="images/iiser_chem_lab_under1mb.jpg" alt="IISER Tirupati chemistry lab" loading="lazy"><span>IISER Tirupati</span></button>
+        <button class="shot" data-img="images/mumbles_swansea_under1mb.jpg" data-alt="Coastal view at Mumbles, Swansea" data-title="Mumbles, Swansea" data-text="My favourite place near Swansea for clearing my head after a long week."><img src="images/mumbles_swansea_under1mb.jpg" alt="Mumbles, Swansea" loading="lazy"><span>Mumbles, Swansea</span></button>
       </div>
     </div>
   </section>
@@ -239,19 +344,62 @@ footer{padding:28px 0;color:var(--muted);font-size:.85rem}
   <section id="contact">
     <div class="wrap">
       <div class="contact">
-        <div><div class="kicker">Contact</div><h2>Let’s talk science.</h2><p>For research discussions, collaborations or academic connections, feel free to reach out via email.</p></div>
-        <a class="btn primary" href="mailto:akashss@students.iisertirupati.ac.in">akashss@students.iisertirupati.ac.in ↗</a>
+        <div>
+          <h2>Say hello</h2>
+          <p>Happy to talk about research, collaborations or anything surface science.</p>
+          <div class="links">
+            <a href="https://www.linkedin.com/in/akash-s-s-b77089206/">LinkedIn</a>
+            <a href="https://orcid.org/0000-0002-1138-2521">ORCID</a>
+          </div>
+        </div>
+        <a class="btn" href="mailto:akashss@students.iisertirupati.ac.in">Email me</a>
       </div>
     </div>
   </section>
 </main>
-<footer><div class="wrap footer-inner"><span>© <span id="year"></span> Akash S. S.</span><span>Built as a clean, responsive academic portfolio.</span></div></footer>
+
+<footer>© <span id="yr"></span> Akash Sajeev Sheeja</footer>
+
+<dialog id="dlg">
+  <button class="close" id="dclose" aria-label="Close">×</button>
+  <img id="dimg" src="" alt="">
+  <div class="cap"><h3 id="dtitle"></h3><p id="dtext"></p></div>
+</dialog>
+
 <script>
-const menu=document.getElementById('menu');
-const nav=document.getElementById('navlinks');
-menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));});
-nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');}));
-document.getElementById('year').textContent=new Date().getFullYear();
+const nav=document.getElementById('nav'),burger=document.getElementById('burger');
+burger.onclick=()=>{const o=nav.classList.toggle('open');burger.setAttribute('aria-expanded',o)};
+nav.querySelectorAll('a').forEach(a=>a.onclick=()=>{nav.classList.remove('open');burger.setAttribute('aria-expanded',false)});
+document.getElementById('yr').textContent=new Date().getFullYear();
+
+// expand / collapse all
+document.querySelectorAll('[data-toggle]').forEach(b=>{
+  b.onclick=()=>{
+    const ds=document.querySelectorAll(b.dataset.toggle+' details');
+    const open=b.textContent.startsWith('Expand');
+    ds.forEach(d=>d.open=open);
+    b.textContent=open?'Collapse all':'Expand all';
+  };
+});
+
+// photo viewer
+const dlg=document.getElementById('dlg');
+document.querySelectorAll('.shot').forEach(s=>s.onclick=()=>{
+  document.getElementById('dimg').src=s.dataset.img;
+  document.getElementById('dimg').alt=s.dataset.alt;
+  document.getElementById('dtitle').textContent=s.dataset.title;
+  document.getElementById('dtext').textContent=s.dataset.text;
+  dlg.showModal();
+});
+document.getElementById('dclose').onclick=()=>dlg.close();
+dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close()});
+
+// highlight current section in nav
+const links=[...nav.querySelectorAll('a')];
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting)links.forEach(l=>l.classList.toggle('on',l.getAttribute('href')==='#'+e.target.id));
+}),{rootMargin:'-40% 0px -55% 0px'});
+document.querySelectorAll('main section').forEach(s=>io.observe(s));
 </script>
 </body>
 </html>
