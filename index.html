@@ -27,13 +27,13 @@ a:hover{color:var(--accent)}
 .top .links a:hover{opacity:1;color:#fff}
 
 /* banner */
-.banner{height:280px;background:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.35)),url('images/iiser_chem_lab_under1mb.jpg') center/cover no-repeat;position:relative}
+.banner{height:280px;background:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.35)),url('images/mumbles_swansea_under1mb.jpg') center 60%/cover no-repeat;position:relative}
 .banner small{position:absolute;right:20px;bottom:12px;color:rgba(255,255,255,.85);font-size:.76rem}
 
 /* layout */
 .page{display:grid;grid-template-columns:300px 1fr;gap:56px;align-items:start}
 aside{margin-top:-96px;position:relative;z-index:2}
-.photo{width:100%;aspect-ratio:1;border-radius:4px;background:#222;border:6px solid #fff;overflow:hidden;display:grid;place-items:center;color:#fff;font-size:4rem;font-weight:800;letter-spacing:-.04em}
+.photo{width:100%;aspect-ratio:4/5;border-radius:4px;background:#222;border:6px solid #fff;overflow:hidden;display:grid;place-items:center;color:#fff;font-size:4rem;font-weight:800;letter-spacing:-.04em}
 .photo img{width:100%;height:100%;object-fit:cover;display:block}
 aside h1{font-size:2rem;line-height:1.1;letter-spacing:-.03em;font-weight:800;margin:22px 0 6px}
 .role{font-weight:600;margin:0}
@@ -44,6 +44,12 @@ aside h1{font-size:2rem;line-height:1.1;letter-spacing:-.03em;font-weight:800;ma
 .block li{padding:3px 0;font-size:.95rem}
 .pills{display:flex;flex-wrap:wrap;gap:6px}
 .pills span{border:1px solid var(--ink);border-radius:99px;padding:2px 11px;font-size:.8rem;font-weight:500}
+
+/* figures */
+.fig{margin:22px 0 28px;max-width:680px}
+.fig img{display:block;width:100%;height:auto;border-radius:2px}
+.fig figcaption{font-size:.85rem;color:var(--muted);margin-top:8px}
+.body .fig{margin:14px 0 6px}
 
 /* tabs */
 main{min-width:0;padding-top:36px}
@@ -134,11 +140,11 @@ footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--muted);f
   </div>
 </div>
 
-<div class="banner" role="img" aria-label="Chemistry laboratory at IISER Tirupati"><small>Chemistry lab, IISER Tirupati</small></div>
+<div class="banner" role="img" aria-label="The coast at Mumbles, Swansea"><small>Mumbles, Swansea</small></div>
 
 <div class="wrap page">
   <aside>
-    <div class="photo"><img src="images/akash_profile.jpg" alt="Akash Sajeev Sheeja" onerror="this.remove();this.parentNode.textContent='AS'"></div>
+    <div class="photo"><img src="images/iiser_chem_lab_under1mb.jpg" alt="In the chemistry lab at IISER Tirupati, 2023" width="600" height="750"></div>
     <div class="id">
       <h1>Akash Sajeev Sheeja</h1>
       <p class="role">PhD student, Physical Chemistry</p>
@@ -181,6 +187,10 @@ footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--muted);f
       <p>I'm a first-year PhD student in the Surface Dynamics group at Swansea University. When a molecule bounces off a metal, some of its energy can end up in surface vibrations. Nickel is a reactive surface, so this exchange matters for catalysis. I use helium spin-echo scattering and MATLAB to measure and fit it.</p>
       <p>Before this I did a BS–MS in Chemistry with a minor in Physics at IISER Tirupati. My earlier work ranged from quantum dots for gas sensing to protein modelling with Prof. Shuguang Zhang's group at MIT, which led to three published papers.</p>
       <p>Outside the lab I play table tennis, edit videos and enjoy teaching maths.</p>
+      <figure class="fig">
+        <img src="images/table_tennis_team.jpg" alt="The table tennis team in matching teal shirts, all giving thumbs up" loading="lazy">
+        <figcaption>Table tennis is how I switch off from the lab. This is the team at a university tournament.</figcaption>
+      </figure>
 
       <div class="stats" aria-label="Google Scholar metrics">
         <div class="stat"><b>31</b><span>Citations</span></div>
@@ -253,7 +263,12 @@ footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--muted);f
         </details>
         <details>
           <summary><div class="t"><b>BS–MS Chemistry, minor in Physics</b><small>IISER Tirupati</small></div><span class="when">2019 – 2024</span></summary>
-          <div class="body"><p>Five-year integrated degree. My master's thesis was an online project with MIT on protein structure prediction and validation of the QTY code (thesis score 9.5/10).</p></div>
+          <div class="body"><p>Five-year integrated degree. My master's thesis was an online project with MIT on protein structure prediction and validation of the QTY code (thesis score 9.5/10).</p>
+            <figure class="fig">
+              <img src="images/iiser_graduation.jpg" alt="Receiving the BS and MS degree certificates at the IISER Tirupati convocation" loading="lazy">
+              <figcaption>Collecting my BS and MS degrees at the convocation, July 2024.</figcaption>
+            </figure>
+          </div>
         </details>
         <details>
           <summary><div class="t"><b>Research intern, Molecular Architecture and Design Lab</b><small>MIT (remote)</small></div><span class="when">2022 – 2024</span></summary>
@@ -314,7 +329,11 @@ footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--muted);f
         <button class="shot" data-img="images/cam_talk_under1mb.jpg" data-alt="Presenting at the Cavendish Laboratory" data-title="Talk at the Cavendish, Cambridge" data-text="Presenting 'Molecule Surface Energy Transfer in a Reactive System' at the Cavendish Laboratory, University of Cambridge, on 4 August 2026."><img src="images/cam_talk_under1mb.jpg" alt="Presenting at the Cavendish Laboratory" loading="lazy"><span>Talk at the Cavendish</span></button>
         <button class="shot" data-img="images/cam_dna_under1mb.jpg" data-alt="DNA plaque at The Eagle in Cambridge" data-title="The Eagle, Cambridge" data-text="The pub near the old Cavendish where Crick and Watson announced the double helix on 28 February 1953. Rosalind Franklin, Maurice Wilkins and others made that discovery possible too."><img src="images/cam_dna_under1mb.jpg" alt="DNA plaque at The Eagle" loading="lazy"><span>The Eagle, Cambridge</span></button>
         <button class="shot" data-img="images/iiser_chem_lab_under1mb.jpg" data-alt="Chemistry laboratory at IISER Tirupati" data-title="Where it started: IISER Tirupati" data-text="The chemistry lab at the Transit Campus, IISER Tirupati, in 2023."><img src="images/iiser_chem_lab_under1mb.jpg" alt="IISER Tirupati chemistry lab" loading="lazy"><span>IISER Tirupati</span></button>
+        <button class="shot" data-img="images/iiser_graduation.jpg" data-alt="Receiving degree certificates at the IISER Tirupati convocation" data-title="Graduation day, IISER Tirupati" data-text="Collecting my BS and MS degrees at the convocation in July 2024, after five years at IISER."><img src="images/iiser_graduation.jpg" alt="Receiving degree certificates at the IISER Tirupati convocation" loading="lazy"><span>Graduation day</span></button>
+        <button class="shot" data-img="images/iop_dinner.jpg" data-alt="In conversation over dinner at an Institute of Physics event" data-title="Talking science over dinner" data-text="At an Institute of Physics event. Some of the best conversations happen over dinner, after the talks are done."><img src="images/iop_dinner.jpg" alt="In conversation over dinner at an Institute of Physics event" loading="lazy"><span>Dinner at a physics meeting</span></button>
         <button class="shot" data-img="images/mumbles_swansea_under1mb.jpg" data-alt="Coastal view at Mumbles, Swansea" data-title="Mumbles, Swansea" data-text="My favourite place near Swansea for clearing my head after a long week."><img src="images/mumbles_swansea_under1mb.jpg" alt="Mumbles, Swansea" loading="lazy"><span>Mumbles, Swansea</span></button>
+        <button class="shot" data-img="images/table_tennis_team.jpg" data-alt="The table tennis team in matching teal shirts at a university tournament" data-title="Table tennis" data-text="With the team at a university tournament. Table tennis is my favourite way to switch off from the lab."><img src="images/table_tennis_team.jpg" alt="The table tennis team at a university tournament" loading="lazy"><span>Table tennis team</span></button>
+        <button class="shot" data-img="images/friends_campus.jpg" data-alt="Five friends in traditional Kerala clothes outside a brick building" data-title="Friends, Kerala style" data-text="With friends on campus, all dressed up in traditional Kerala clothes."><img src="images/friends_campus.jpg" alt="Five friends in traditional Kerala clothes" loading="lazy"><span>Friends in Kerala dress</span></button>
       </div>
     </section>
   </main>
